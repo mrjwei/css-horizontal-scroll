@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Horizontal Scroll</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 100vw;
+        transform: rotate(-90deg) translateY(-500px);
+        transform-origin: top right;
+        overflow-x: hidden;
+        overflow-y: auto;
+        counter-reset: offset;
+      }
+      .container div {
+        counter-increment: offset;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        transform: rotate(90deg);
+        margin: 10px 0;
+      }
+      p {
+        padding: 10px;
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="./images/image1.jpeg" alt="" />
+        <p>image 1</p>
+      </div>
+      <div>
+        <img src="./images/image2.jpeg" alt="" />
+        <p>image 2</p>
+      </div>
+      <div>
+        <img src="./images/image3.jpeg" alt="" />
+        <p>image 3</p>
+      </div>
+      <div>
+        <img src="./images/image4.jpeg" alt="" />
+        <p>image 4</p>
+      </div>
+      <div>
+        <img src="./images/image5.jpeg" alt="" />
+        <p>image 5</p>
+      </div>
+      <div>
+        <img src="./images/image6.jpeg" alt="" />
+        <p>image 6</p>
+      </div>
+      <div>
+        <img src="./images/image7.jpeg" alt="" />
+        <p>image 7</p>
+      </div>
+      <div>
+        <img src="./images/image8.jpeg" alt="" />
+        <p>image 8</p>
+      </div>
+    </div>
+  </body>
+</html>
